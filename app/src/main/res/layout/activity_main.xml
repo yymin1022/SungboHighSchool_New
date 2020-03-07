@@ -9,4 +9,28 @@
         android:layout_height="wrap_content"
         android:text="Hello World!" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_btn_meal"
+        android:id="@+id/btn_main_meal" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_btn_notice"
+        android:id="@+id/btn_main_notice" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_btn_schoolinfo"
+        android:id="@+id/btn_main_schoolInfo" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_btn_devinfo"
+        android:id="@+id/btn_main_devInfo" />
+
 </LinearLayout>

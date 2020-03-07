@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">SungboHighSchool_New</string>
 
+    <string name="main_btn_devinfo">Developer Info</string>
+    <string name="main_btn_meal">Meal</string>
+    <string name="main_btn_notice">Notice</string>
+    <string name="main_btn_schoolinfo">School Info</string>
+
     <string name="description_splash_logo">Splash Logo</string>
 </resources>
