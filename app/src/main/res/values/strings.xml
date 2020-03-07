@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SungboHighSchool_New</string>
+
+    <string name="description_splash_logo">Splash Logo</string>
 </resources>
