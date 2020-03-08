@@ -9,9 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DevinfoActivity"></activity>
+        <activity android:name=".SchoolinfoActivity" />
+        <activity android:name=".NoticeActivity" />
+        <activity android:name=".MealActivity" />
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme"/>
+            android:theme="@style/SplashTheme" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
