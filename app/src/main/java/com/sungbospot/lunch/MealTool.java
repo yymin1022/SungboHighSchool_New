@@ -9,9 +9,6 @@ import java.util.Locale;
 
 import toast.library.meal.MealLibrary;
 
-/**
- * Created by whdghks913 on 2015-02-17.
- */
 public class MealTool {
     public static final String Meal_PREFERENCE_NAME = "MealData";
 
@@ -20,20 +17,10 @@ public class MealTool {
     public static final int TYPE_DINNER = 2;
 
     public static String getMealStringFormat(int year, int month, int day, int type) {
-        /**
-         * Format : year-month-day-TYPE
-         */
         return year + "-" + month + "-" + day + "-" + type;
     }
 
-    /**
-     * Pref Name Format : 2015-02-17-TYPE_index
-     * ex) 2015-02-17-1_3
-     */
-    public static void saveMealData(Context mContext, String[] Calender, String[] Morning, String[] Lunch, String[] Dinner) {
-        /**
-         * Do not Edit : yyyy.MM.dd(E)
-         */
+    public static void saveMealData(Context mContext, String[] Calender, String[] Lunch, String[] Dinner) {
         Preference mPref = new Preference(mContext, Meal_PREFERENCE_NAME);
         SimpleDateFormat mFormat = new SimpleDateFormat("yyyy.MM.dd(E)", Locale.KOREA);
 
@@ -68,26 +55,12 @@ public class MealTool {
         }
     }
 
-    /**
-     * Format : 2015-2-11-2
-     */
     public static restoreMealDateClass restoreMealData(Context mContext, int year, int month, int day) {
-        /**
-         * TODO 디버그를 하려면 Log.d를 활성화 하세요.
-         */
-
-        /**
-         * TODO 원하는 Date Format이 있으면 'yyyy년 MM월 dd일', 'E요일'을 수정하세요
-         */
         Preference mPref = new Preference(mContext, Meal_PREFERENCE_NAME);
         SimpleDateFormat mCalenderFormat = new SimpleDateFormat("yyyy년 MM월 dd일", Locale.KOREA);
         SimpleDateFormat mDayOfWeekFormat = new SimpleDateFormat("E요일", Locale.KOREA);
         Calendar mDate = Calendar.getInstance();
         mDate.set(year, month, day);
-
-//        Log.d("YEAR", "" + mDate.get(Calendar.YEAR));
-//        Log.d("MONTH", "" + mDate.get(Calendar.MONTH));
-//        Log.d("DAY_OF_MONTH", "" + mDate.get(Calendar.DAY_OF_MONTH));
 
         restoreMealDateClass mData = new restoreMealDateClass();
 
@@ -95,9 +68,6 @@ public class MealTool {
         String mPrefLunchName = getMealStringFormat(year, month + 1, day, TYPE_LUNCH);
         String mPrefDinnerName = getMealStringFormat(year, month + 1, day, TYPE_DINNER);
 
-//        Log.d("mPrefMorningName", "" + mPrefMorningName);
-//        Log.d("mPrefLunchName", "" + mPrefLunchName);
-//        Log.d("mPrefDinnerName", "" + mPrefDinnerName);
 
         mData.Calender = mCalenderFormat.format(mDate.getTime());
         mData.DayOfTheWeek = mDayOfWeekFormat.format(mDate.getTime());
@@ -105,15 +75,6 @@ public class MealTool {
         mData.Lunch = mPref.getString(mPrefLunchName, null);
         mData.Dinner = mPref.getString(mPrefDinnerName, null);
 
-//        Log.d("mData.Calender", "" + mData.Calender);
-//        Log.d("mData.DayOfTheWeek", "" + mData.DayOfTheWeek);
-//        Log.d("mData.Lunch", "" + mData.Lunch);
-//        Log.d("mData.Dinner", "" + mData.Dinner);
-
-        /**
-         * TODO 아침 데이터를 체크하는 코드는 필요 없다는 판단하에 추가하지 않음
-         * 점심과 저녁이 null이 아니라면 아침도 null이 아니므로
-         */
         if (mData.Lunch == null && mData.Dinner == null) {
             mData.isBlankDay = true;
         }
@@ -121,11 +82,6 @@ public class MealTool {
         return mData;
     }
 
-    /**
-     * restoreMealData()를 실행할때 반환하는 Class입니다.
-     * Calender, DayOfTheWeek 에는 날짜 정보가, Lunch, Dinner에는 급식 데이터가 담겨있고
-     * isBlankDay=true 이면 그 날은 급식 데이터가 저장되어 있지 않습니다.
-     */
     public static class restoreMealDateClass {
         public String Calender;
         public String DayOfTheWeek;
