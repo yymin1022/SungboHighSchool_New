@@ -1,6 +1,7 @@
 package com.sungbospot.lunch;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         startActivity(new Intent(this, SplashActivity.class));
+
+        Toolbar mainToolbar = findViewById(R.id.main_toolbar);
+        setSupportActionBar(mainToolbar);
 
         btnDevinfo = findViewById(R.id.main_btn_devInfo);
         btnMeal = findViewById(R.id.main_btn_meal);

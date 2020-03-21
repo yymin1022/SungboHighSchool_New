@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#2196f3</color>
+<!--    <color name="colorPrimary">#bae1ff</color>-->
     <color name="colorPrimaryDark">#0069c0</color>
     <color name="colorAccent">#2196f3</color>
 
-    <color name="colotSplash">#006FFF</color>
+    <color name="colorSplash">#006fff</color>
+
+    <color name="colorDevinfo">#bae1ff</color>
+    <color name="colorMeal">#ffb3ba</color>
+    <color name="colorNotice">#ffdfba</color>
+    <color name="colorSchoolInfo">#baffc9</color>
 </resources>

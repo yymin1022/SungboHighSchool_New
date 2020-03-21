@@ -3,21 +3,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:background="@android:color/white">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:id="@+id/main_toolbar"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:id="@+id/main_btn_meal">
+        android:id="@+id/main_btn_meal"
+        android:background="@color/colorMeal">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -41,10 +45,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:id="@+id/main_btn_notice">
+            android:id="@+id/main_btn_notice"
+            android:background="@color/colorNotice">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -68,10 +73,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:id="@+id/main_btn_schoolInfo">
+                android:id="@+id/main_btn_schoolInfo"
+                android:background="@color/colorSchoolInfo">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -89,10 +95,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:id="@+id/main_btn_devInfo">
+                android:id="@+id/main_btn_devInfo"
+                android:background="@color/colorDevinfo">
 
                 <ImageView
                     android:layout_width="wrap_content"
