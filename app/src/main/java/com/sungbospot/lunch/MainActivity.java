@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, SplashActivity.class));
 
         Toolbar mainToolbar = findViewById(R.id.main_toolbar);
-        mainToolbar.setTitleTextColor(getResources().getColor(R.color.colorPrimary));
         setSupportActionBar(mainToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         btnDevinfo = findViewById(R.id.main_btn_devInfo);
         btnMeal = findViewById(R.id.main_btn_meal);
