@@ -5,8 +5,11 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout btnDevinfo;
@@ -54,5 +57,22 @@ public class MainActivity extends AppCompatActivity {
         btnMeal.setOnClickListener(btnListener);
         btnNotice.setOnClickListener(btnListener);
         btnSchoolinfo.setOnClickListener(btnListener);
+
+        getTodayMeal();
+    }
+
+    public void getTodayMeal(){
+        Calendar mCalendar = Calendar.getInstance();
+
+        int year = mCalendar.get(Calendar.YEAR);
+        int month = mCalendar.get(Calendar.MONTH);
+        int day = mCalendar.get(Calendar.DAY_OF_MONTH);
+        MealTool.restoreMealDateClass mData = MealTool.restoreMealData(getApplicationContext(), year, month, day);
+
+        if(mData.isBlankDay){
+
+        }else{
+
+        }
     }
 }
