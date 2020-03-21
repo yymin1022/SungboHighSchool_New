@@ -7,12 +7,13 @@ import android.os.Bundle;
 import android.view.DragEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnDevinfo;
-    Button btnMeal;
-    Button btnNotice;
-    Button btnSchoolinfo;
+    LinearLayout btnDevinfo;
+    LinearLayout btnMeal;
+    LinearLayout btnNotice;
+    LinearLayout btnSchoolinfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
