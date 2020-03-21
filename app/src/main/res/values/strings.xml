@@ -1,10 +1,3 @@
 <resources>
-    <string name="app_name">SungboHighSchool</string>
-
-    <string name="main_btn_devinfo">Developer Info</string>
-    <string name="main_btn_meal">Meal</string>
-    <string name="main_btn_notice">Notice</string>
-    <string name="main_btn_schoolinfo">School Info</string>
-
-    <string name="description_splash_logo">Splash Logo</string>
+    <string name="app_name">성보고등학교</string>
 </resources>

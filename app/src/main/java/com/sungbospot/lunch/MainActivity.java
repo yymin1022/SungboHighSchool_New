@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.Calendar;
 
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout btnMeal;
     LinearLayout btnNotice;
     LinearLayout btnSchoolinfo;
+    TextView textDinner;
+    TextView textLunch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         btnMeal = findViewById(R.id.main_btn_meal);
         btnNotice = findViewById(R.id.main_btn_notice);
         btnSchoolinfo = findViewById(R.id.main_btn_schoolInfo);
+        textDinner = findViewById(R.id.main_text_dinner);
+        textLunch = findViewById(R.id.main_text_lunch);
 
         View.OnClickListener btnListener = new View.OnClickListener() {
             @Override
@@ -67,12 +72,13 @@ public class MainActivity extends AppCompatActivity {
         int year = mCalendar.get(Calendar.YEAR);
         int month = mCalendar.get(Calendar.MONTH);
         int day = mCalendar.get(Calendar.DAY_OF_MONTH);
-        MealTool.restoreMealDateClass mData = MealTool.restoreMealData(getApplicationContext(), year, month, day);
+        MealTool.restoreMealDateClass mData = MealTool.restoreMealData(getApplicationContext(), year, month, 16);
 
-        if(mData.isBlankDay){
-
-        }else{
-
+        if(mData.Lunch != null){
+            textLunch.setText(mData.Lunch);
+        }
+        if(mData.Dinner != null){
+            textDinner.setText(mData.Dinner);
         }
     }
 }
