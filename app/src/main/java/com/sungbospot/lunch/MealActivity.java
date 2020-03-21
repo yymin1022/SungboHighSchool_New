@@ -47,8 +47,7 @@ public class MealActivity extends AppCompatActivity {
             int year = mCalendar.get(Calendar.YEAR);
             int month = mCalendar.get(Calendar.MONTH);
             int day = mCalendar.get(Calendar.DAY_OF_MONTH);
-            MealTool.restoreMealDateClass mData =
-                    MealTool.restoreMealData(getApplicationContext(), year, month, day);
+            MealTool.restoreMealDateClass mData = MealTool.restoreMealData(getApplicationContext(), year, month, day);
             if (mData.isBlankDay) {
                 if (isNetwork(getApplicationContext())) {
                     if (!isUpdating && isUpdate) {
@@ -64,7 +63,7 @@ public class MealActivity extends AppCompatActivity {
                 }
                 return;
             }
-            mAdapter.addItem(mData.Calender, mData.DayOfTheWeek, mData.Morning, mData.Lunch, mData.Dinner);
+            mAdapter.addItem(mData.Calender, mData.DayOfTheWeek, mData.Lunch, mData.Dinner);
             mCalendar.add(Calendar.DATE, 1);
         }
         mAdapter.notifyDataSetChanged();

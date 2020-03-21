@@ -12,7 +12,6 @@ import toast.library.meal.MealLibrary;
 public class MealTool {
     public static final String Meal_PREFERENCE_NAME = "MealData";
 
-    public static final int TYPE_MORNING = 0;
     public static final int TYPE_LUNCH = 1;
     public static final int TYPE_DINNER = 2;
 
@@ -33,19 +32,15 @@ public class MealTool {
                 int month = mDate.get(Calendar.MONTH) + 1;
                 int day = mDate.get(Calendar.DAY_OF_MONTH);
 
-                String mPrefMorningName = getMealStringFormat(year, month, day, TYPE_MORNING);
                 String mPrefLunchName = getMealStringFormat(year, month, day, TYPE_LUNCH);
                 String mPrefDinnerName = getMealStringFormat(year, month, day, TYPE_DINNER);
 
-                String mMorning = Morning[index];
                 String mLunch = Lunch[index];
                 String mDinner = Dinner[index];
 
-                if (!MealLibrary.isMealCheck(mMorning)) mMorning = "";
                 if (!MealLibrary.isMealCheck(mLunch)) mLunch = "";
                 if (!MealLibrary.isMealCheck(mDinner)) mDinner = "";
 
-                mPref.putString(mPrefMorningName, mMorning);
                 mPref.putString(mPrefLunchName, mLunch);
                 mPref.putString(mPrefDinnerName, mDinner);
 
@@ -64,14 +59,11 @@ public class MealTool {
 
         restoreMealDateClass mData = new restoreMealDateClass();
 
-        String mPrefMorningName = getMealStringFormat(year, month + 1, day, TYPE_MORNING);
         String mPrefLunchName = getMealStringFormat(year, month + 1, day, TYPE_LUNCH);
         String mPrefDinnerName = getMealStringFormat(year, month + 1, day, TYPE_DINNER);
 
-
         mData.Calender = mCalenderFormat.format(mDate.getTime());
         mData.DayOfTheWeek = mDayOfWeekFormat.format(mDate.getTime());
-        mData.Morning = mPref.getString(mPrefMorningName, null);
         mData.Lunch = mPref.getString(mPrefLunchName, null);
         mData.Dinner = mPref.getString(mPrefDinnerName, null);
 
@@ -85,15 +77,12 @@ public class MealTool {
     public static class restoreMealDateClass {
         public String Calender;
         public String DayOfTheWeek;
-        public String Morning;
         public String Lunch;
         public String Dinner;
         public boolean isBlankDay = false;
     }
 
     public static boolean mStringCheck(String mString) {
-        if (mString == null || "".equals(mString) || " ".equals(mString))
-            return true;
-        return false;
+        return (mString == null || "".equals(mString) || " ".equals(mString));
     }
 }

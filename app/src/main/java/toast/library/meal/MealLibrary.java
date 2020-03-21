@@ -1,12 +1,22 @@
 package toast.library.meal;
 
+import android.os.Environment;
+import android.util.Log;
+import android.widget.Toast;
+
 import net.htmlparser.jericho.Element;
 import net.htmlparser.jericho.Source;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import javax.net.ssl.HostnameVerifier;
@@ -47,6 +57,8 @@ public class MealLibrary {
         String url = "https://stu." + CountryCode + "/sts_sci_md01_001.do?schulCode=" + schulCode + "&schulCrseScCode="
                 + schulCrseScCode + "&schulKndScCode=" + schulKndScCode + "&schMmealScCode=" + schMmealScCode;
 
+        Log.d("URL", url);
+
         return getDateNewSub(date, url);
     }
 
@@ -57,6 +69,8 @@ public class MealLibrary {
         String url = "https://stu." + CountryCode + "/sts_sci_md01_001.do?schulCode=" + schulCode + "&schulCrseScCode="
                 + schulCrseScCode + "&schulKndScCode=" + schulKndScCode + "&schMmealScCode=" + schMmealScCode
                 + "&schYmd=" + year + "." + month + "." + day;
+
+        Log.d("URL", url);
 
         return getDateNewSub(date, url);
     }
@@ -247,7 +261,6 @@ public class MealLibrary {
                 urlConnection.setHostnameVerifier(hostnameVerifier);
                 mStream = urlConnection.getInputStream();
                 mSource = new Source(mStream);
-
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
@@ -263,6 +276,9 @@ public class MealLibrary {
         }
 
         mSource.fullSequentialParse();
+
+        Log.d("SOURCE", mSource.toString());
+
         List<?> table = mSource.getAllElements("table");
 
         for (int i = 0; i < table.size(); i++) {
@@ -271,7 +287,7 @@ public class MealLibrary {
                 List<?> tr = ((Element) tbody.get(0)).getAllElements("tr");
                 List<?> title = ((Element) tr.get(2)).getAllElements("th");
 
-                if (((Element) title.get(0)).getContent().toString().equals("�앹옱猷�")) {
+                if (((Element) title.get(0)).getContent().toString().equals("식재료")) {
                     List<?> tdMeal = ((Element) tr.get(1)).getAllElements("td");
 
                     for (int j = 0; j < 7; j++) {
@@ -353,7 +369,7 @@ public class MealLibrary {
                 List<?> __tr = ((Element) tbody.get(0)).getAllElements("tr");
                 List<?> __th = ((Element) __tr.get(0)).getAllElements("th");
 
-                if (((Element) __th.get(0)).getContent().toString().equals("湲됱떇�몄썝")) {
+                if (((Element) __th.get(0)).getContent().toString().equals("급식인원")) {
                     List<?> td = ((Element) __tr.get(0)).getAllElements("td");
 
                     for (int j = 0; j < 7; j++) {
