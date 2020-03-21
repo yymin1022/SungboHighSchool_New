@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SungboHighSchool_New</string>
+    <string name="app_name">SungboHighSchool</string>
 
     <string name="main_btn_devinfo">Developer Info</string>
     <string name="main_btn_meal">Meal</string>

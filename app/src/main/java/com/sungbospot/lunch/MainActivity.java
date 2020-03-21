@@ -5,9 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.DragEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, SplashActivity.class));
 
         Toolbar mainToolbar = findViewById(R.id.main_toolbar);
+        mainToolbar.setTitleTextColor(getResources().getColor(R.color.colorPrimary));
         setSupportActionBar(mainToolbar);
 
         btnDevinfo = findViewById(R.id.main_btn_devInfo);
