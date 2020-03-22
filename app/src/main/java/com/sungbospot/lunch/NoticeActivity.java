@@ -10,11 +10,12 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 import static com.sungbospot.lunch.MealActivity.isNetwork;
 
 public class NoticeActivity extends AppCompatActivity {
-    String url;
-    ProgressDialog dialog;
+    String url = "http://www.sungbo.hs.kr/70447/subMenu.do";
     WebView webView;
 
     @Override
@@ -23,16 +24,6 @@ public class NoticeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notice);
         if(isNetwork(getApplicationContext())){
-            Intent intent = getIntent();
-            String strWhat = intent.getStringExtra("what");
-            switch(strWhat){
-                case "notice":
-                    url="http://www.sungbo.hs.kr/70447/subMenu.do";
-                    break;
-                case "home":
-                    url="http://www.sungbo.hs.kr/70448/subMenu.do";
-                    break;
-            }
             webView = findViewById(R.id.notice_webview);
             webView.getSettings().setJavaScriptEnabled(true);
             webView.setWebViewClient(new mWebViewClient());
@@ -63,7 +54,7 @@ public class NoticeActivity extends AppCompatActivity {
         }
         @Override
         public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-            Toast.makeText(NoticeActivity.this, "오류가 발생하였습니다.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(NoticeActivity.this, String.format(Locale.getDefault(), "%d : 오류가 발생하였습니다.\n%s", errorCode, description), Toast.LENGTH_SHORT).show();
             if (dialog.isShowing()) {
                 dialog.cancel();
                 finish();

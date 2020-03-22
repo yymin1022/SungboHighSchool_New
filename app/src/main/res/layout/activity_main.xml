@@ -256,4 +256,12 @@
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="개발자의 졸업으로 인해 기능을 최소화하여 최대한의 안정성을 확보한 버전으로, 더이상의 업데이트가 지원되지 않습니다." />
+
 </LinearLayout>

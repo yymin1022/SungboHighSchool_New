@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="7.5dp"
         android:layout_marginBottom="7.5dp"
+        app:cardBackgroundColor="@color/colorCardBackground"
         app:cardCornerRadius="30dp">
 
         <LinearLayout

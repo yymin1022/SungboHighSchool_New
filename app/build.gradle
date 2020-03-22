@@ -8,8 +8,8 @@ android {
         applicationId "com.sungbospot.lunch"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 28
+        versionName "9.0_FINAL"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
