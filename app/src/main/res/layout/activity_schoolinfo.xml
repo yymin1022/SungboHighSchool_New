@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground">
@@ -20,27 +21,23 @@
                 android:layout_marginTop="7.5dp"
                 android:layout_marginBottom="7.5dp"
                 android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp">
+                android:layout_marginEnd="15dp"
+                app:cardCornerRadius="30dp">
 
                 <LinearLayout
                     android:id="@+id/layout_info1"
                     android:layout_width="match_parent"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_vertical">
+                    android:layout_margin="15dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
                         android:id="@+id/tv_info1"
                         android:textColor="#1565c0"
                         android:textStyle="bold"
-                        android:textSize="20dp"
+                        android:textSize="17sp"
                         android:text="교훈"/>
 
                     <LinearLayout
@@ -76,29 +73,26 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:theme="@style/Theme.AppCompat.Light"
-                android:orientation="vertical">
+                android:layout_marginTop="7.5dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:cardCornerRadius="30dp">
 
                 <LinearLayout
                     android:id="@+id/layout_info2"
                     android:layout_width="match_parent"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_vertical">
+                    android:layout_margin="15dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
                         android:id="@+id/tv_info2"
                         android:textColor="#1565c0"
                         android:textStyle="bold"
-                        android:textSize="20dp"
+                        android:textSize="17sp"
                         android:text="교표"/>
 
                     <LinearLayout
@@ -115,7 +109,6 @@
                             android:id="@+id/info2"
                             android:background="@drawable/info_2"/>
 
-
                         <TextView
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
@@ -126,7 +119,6 @@
                             android:textColor="#808080"
                             android:text="교표의 모양과 빛깔은 동양철학의 원천인 주역의 원리에 근거하여 창안한 것이다.\n\n테두리 : 하늘과 땅의 만남\n삼각형 : 위가 홀수고 아래가 짝수인 것은 사람의 모양을 형상화 한 것이다. 하늘과 땅 사이에 조화롭게 삶을 사는 사람\n파랑색 : 성실, 진실, 냉정"/>
 
-
                     </LinearLayout>
 
                 </LinearLayout>
@@ -136,29 +128,26 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:theme="@style/Theme.AppCompat.Light"
-                android:orientation="vertical">
+                android:layout_marginTop="7.5dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:cardCornerRadius="30dp">
 
                 <LinearLayout
                     android:id="@+id/layout_info3"
                     android:layout_width="match_parent"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_vertical">
+                    android:layout_margin="15dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
                         android:id="@+id/tv_info3"
                         android:textColor="#1565c0"
                         android:textStyle="bold"
-                        android:textSize="20dp"
+                        android:textSize="17sp"
                         android:text="교기"/>
 
                     <LinearLayout
@@ -185,7 +174,6 @@
                             android:textColor="#808080"
                             android:text="청색은 원래 성실,진실,냉정을 상징하니 냉철한 이성을 바탕으로 진실하고 성실하며 밝고 넓은 마음을 갖고, 우주의 이상적인 세계를 구현하며, 그 속에서 조화롭게 사는 인간의 육성을 목표로 하는 본교의 교육 이상을 나타낸다."/>
 
-
                     </LinearLayout>
 
                 </LinearLayout>
@@ -195,30 +183,26 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:theme="@style/Theme.AppCompat.Light"
-                android:orientation="vertical">
-
+                android:layout_marginTop="7.5dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:cardCornerRadius="30dp">
 
                 <LinearLayout
                     android:id="@+id/layout_info4"
                     android:layout_width="match_parent"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_vertical">
+                    android:layout_margin="15dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
                         android:id="@+id/tv_info4"
                         android:textColor="#1565c0"
                         android:textStyle="bold"
-                        android:textSize="20dp"
+                        android:textSize="17sp"
                         android:text="교화"/>
 
                     <LinearLayout
@@ -245,7 +229,6 @@
                             android:textColor="#808080"
                             android:text="모란 : 소망과 보람, 부귀, 기대되는 성취, 불처럼 타오르는 정열로 적극적으로 살아가는 성보인의 상징이다."/>
 
-
                     </LinearLayout>
 
                 </LinearLayout>
@@ -255,29 +238,26 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:theme="@style/Theme.AppCompat.Light"
-                android:orientation="vertical">
+                android:layout_marginTop="7.5dp"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:cardCornerRadius="30dp">
 
                 <LinearLayout
                     android:id="@+id/layout_info5"
                     android:layout_width="match_parent"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center_vertical">
+                    android:layout_margin="15dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
                         android:id="@+id/tv_info5"
                         android:textColor="#1565c0"
                         android:textStyle="bold"
-                        android:textSize="20dp"
+                        android:textSize="17sp"
                         android:text="교목"/>
 
                     <LinearLayout
@@ -303,7 +283,6 @@
                             android:layout_gravity="center_vertical"
                             android:textColor="#808080"
                             android:text="은행나무 : 기풍은 청아 준수하고 잎, 열매, 나무 등 전체가 쓸모있어 개척적인 삶과 무궁한 발전을 지향하는 성보인을 상징한다."/>
-
 
                     </LinearLayout>
 

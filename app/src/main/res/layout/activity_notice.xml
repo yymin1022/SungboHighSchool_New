@@ -5,4 +5,9 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground">
 
+    <WebView
+        android:id="@+id/notice_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </LinearLayout>
