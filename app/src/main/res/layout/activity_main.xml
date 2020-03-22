@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorBackground">
+    android:background="@color/colorBackground"
+    android:clipToPadding="false">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
@@ -60,19 +61,22 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25sp"
+                    android:layout_marginEnd="5dp"
                     android:src="@drawable/ic_meal" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="급식정보"
+                    android:textSize="20sp"
                     android:textStyle="bold"/>
 
                 <TextView
-                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25sp"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp"
                     android:text="확인"/>
 
             </LinearLayout>
@@ -114,7 +118,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginBottom="15dp"
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
@@ -124,6 +127,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginEnd="7.5dp"
             android:layout_marginTop="7.5dp"
+            android:layout_marginBottom="15dp"
             app:cardCornerRadius="30dp"
             app:cardBackgroundColor="@color/colorCardBackground">
 
@@ -137,13 +141,22 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="25sp"
+                    android:layout_marginEnd="5dp"
                     android:src="@drawable/ic_notice" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/main_btn_notice" />
+                    android:text="공지"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="사항"
+                    android:textSize="20sp"/>
 
             </LinearLayout>
 
@@ -176,13 +189,22 @@
 
                     <ImageView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="25sp"
+                        android:layout_marginEnd="5dp"
                         android:src="@drawable/ic_schoolinfo" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/main_btn_schoolinfo" />
+                        android:text="학교"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="정보"/>
 
                 </LinearLayout>
 
@@ -195,6 +217,7 @@
                 android:layout_marginStart="7.5dp"
                 android:layout_marginEnd="15dp"
                 android:layout_marginTop="7.5dp"
+                android:layout_marginBottom="15dp"
                 app:cardCornerRadius="30dp"
                 app:cardBackgroundColor="@color/colorCardBackground">
 
@@ -208,13 +231,22 @@
 
                     <ImageView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_marginEnd="5dp"
                         android:src="@drawable/ic_devinfo" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/main_btn_devinfo" />
+                        android:text="개발자"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="정보"
+                        android:textSize="20sp"/>
 
                 </LinearLayout>
 
